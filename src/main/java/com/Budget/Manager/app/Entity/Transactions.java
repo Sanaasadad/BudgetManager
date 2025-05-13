@@ -1,9 +1,6 @@
 package com.Budget.Manager.app.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,7 +14,10 @@ public class Transactions {
     private double montant;
     private String description;
     private Date date;
+
     private boolean type;
-    private String categorie;
+    @ManyToOne
+    @JoinColumn(name = "categorie_id")
+    private Categories categorie;
 
 }

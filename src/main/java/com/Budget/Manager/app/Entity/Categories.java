@@ -1,12 +1,11 @@
 package com.Budget.Manager.app.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity @Data @AllArgsConstructor @NoArgsConstructor
 public class Categories {
@@ -15,4 +14,8 @@ public class Categories {
     private Long id;
     private String nom;
     private boolean type;
+    @OneToMany (mappedBy = "categories", cascade = CascadeType.ALL)
+    private List<Transactions> transactions;
+    @OneToOne (mappedBy = "categories")
+    private Budgets budgets;
 }
