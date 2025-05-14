@@ -15,8 +15,11 @@ public class Budgets {
     private LocalDate date_de_debut;
     private LocalDate date_de_fin;
     private double montant_depense;
-     @OneToOne
-     @JoinColumn(name = "categorie_id")
-    private Budgets budget;
+
+    @OneToOne
+    @JoinColumn(name = "categorie_id")
+    private Categories categorie;
+
+
 
 }

@@ -14,8 +14,8 @@ public class Categories {
     private Long id;
     private String nom;
     private boolean type;
-    @OneToMany (mappedBy = "categories", cascade = CascadeType.ALL)
+    @OneToMany (mappedBy = "categorie", cascade = CascadeType.ALL)
     private List<Transactions> transactions;
-    @OneToOne (mappedBy = "categories")
-    private Budgets budgets;
+    @OneToOne (mappedBy = "categorie")
+    private Budgets budget;
 }
