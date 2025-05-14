@@ -28,7 +28,7 @@ public class TransactionController {
     }
     @PutMapping("/product")
     public Transactions updateProduct( @RequestBody Transactions product) {
-        return trasactionRepositorie.save(product);
+        return trasactionRepositorie .save(product);
 
 
     }
