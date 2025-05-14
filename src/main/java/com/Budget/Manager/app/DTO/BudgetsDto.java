@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 
-@Value
+
 public class BudgetsDto implements Serializable {
     Long id;
     LocalDate date_de_debut;

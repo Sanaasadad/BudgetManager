@@ -1,16 +1,72 @@
 package com.Budget.Manager.app.DTO;
 
-import lombok.Value;
+import com.Budget.Manager.app.Entity.Categories;
+import com.Budget.Manager.app.Entity.Transactions;
+import jakarta.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
+@AllArgsConstructor
+@NoArgsConstructor
 
-
-@Value
 public class TransactionsDto implements Serializable {
-    Long id;
-    double montant;
-    String description;
-    Date date;
-    boolean type;
+     Long id;
+     double montant;
+     String description;
+     Date date;
+     boolean type;
+     Long idCategorie;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public double getMontant() {
+        return montant;
+    }
+
+    public void setMontant(double montant) {
+        this.montant = montant;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public boolean isType() {
+        return type;
+    }
+
+    public void setType(boolean type) {
+        this.type = type;
+    }
+
+    public Long getIdCategorie() {
+        return idCategorie;
+    }
+
+    public void setIdCategorie(Long idCategorie) {
+        this.idCategorie = idCategorie;
+    }
 }

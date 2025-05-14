@@ -16,7 +16,7 @@ public class Transactions {
  private Date date;
  private boolean type;
  @ManyToOne
- @JoinColumn(name = "categorie_id")
+
  private Categories categorie;
 
  public double getMontant() {
