@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class CategorieDto implements Serializable {
     Long idCategorie;
     String nom;
-    boolean type;
+    String type;
 
     public Long getIdCategorie() {
         return idCategorie;
@@ -27,11 +27,11 @@ public class CategorieDto implements Serializable {
         this.nom = nom;
     }
 
-    public boolean isType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(boolean type) {
+    public void setType(String type) {
         this.type = type;
     }
 }

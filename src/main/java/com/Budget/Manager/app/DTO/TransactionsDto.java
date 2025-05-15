@@ -11,47 +11,23 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
+public class TransactionsDto {
+    Long id;
+    double montant;
+    String description;
+    Date date;
+    boolean type;
+    Long idCategorie;
 
-public class TransactionsDto implements Serializable {
-     Long id;
-     double montant;
-     String description;
-     Date date;
-     boolean type;
-     Long idCategorie;
-
-    public Long getId() {
-        return id;
+    public Long getIdCategorie() {
+        return idCategorie;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public double getMontant() {
-        return montant;
-    }
-
-    public void setMontant(double montant) {
-        this.montant = montant;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
+    public void setIdCategorie(Long idCategorie) {
+        this.idCategorie = idCategorie;
     }
 
     public boolean isType() {
@@ -62,11 +38,35 @@ public class TransactionsDto implements Serializable {
         this.type = type;
     }
 
-    public Long getIdCategorie() {
-        return idCategorie;
+    public Date getDate() {
+        return date;
     }
 
-    public void setIdCategorie(Long idCategorie) {
-        this.idCategorie = idCategorie;
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getMontant() {
+        return montant;
+    }
+
+    public void setMontant(double montant) {
+        this.montant = montant;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

@@ -6,7 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-@Entity  @NoArgsConstructor @AllArgsConstructor
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Transactions {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +21,13 @@ public class Transactions {
  @ManyToOne
 
  private Categories categorie;
+
+
+
+
+
+
+
 
  public double getMontant() {
   return montant;

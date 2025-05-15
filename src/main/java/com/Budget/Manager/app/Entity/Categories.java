@@ -13,11 +13,20 @@ public class Categories {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCategorie;
     private String nom;
-    private boolean type;
+    private String type;
     @OneToMany (mappedBy = "categorie", cascade = CascadeType.ALL)
     private List<Transactions> transactions;
     @OneToOne (mappedBy = "categorie")
     private Budgets budget;
+
+
+
+
+
+
+
+
+
 
     public Long getIdCategorie() {
         return idCategorie;
@@ -35,11 +44,11 @@ public class Categories {
         this.nom = nom;
     }
 
-    public boolean isType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(boolean type) {
+    public void setType(String type) {
         this.type = type;
     }
 
