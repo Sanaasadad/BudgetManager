@@ -14,10 +14,10 @@ public class Categories {
     private Long idCategorie;
     private String nom;
     private String type;
-    @OneToMany (mappedBy = "categorie", cascade = CascadeType.ALL)
-    private List<Transactions> transactions;
-    @OneToOne (mappedBy = "categorie")
-    private Budgets budget;
+//    @OneToMany (mappedBy = "categorie", cascade = CascadeType.ALL)
+//    private List<Transactions> transactions;
+//    @OneToOne (mappedBy = "categorie")
+//    private Budgets budget;
 
 
 
@@ -52,19 +52,19 @@ public class Categories {
         this.type = type;
     }
 
-    public List<Transactions> getTransactions() {
-        return transactions;
-    }
-
-    public void setTransactions(List<Transactions> transactions) {
-        this.transactions = transactions;
-    }
-
-    public Budgets getBudget() {
-        return budget;
-    }
-
-    public void setBudget(Budgets budget) {
-        this.budget = budget;
-    }
+//    public List<Transactions> getTransactions() {
+//        return transactions;
+//    }
+//
+//    public void setTransactions(List<Transactions> transactions) {
+//        this.transactions = transactions;
+//    }
+//
+//    public Budgets getBudget() {
+//        return budget;
+//    }
+//
+//    public void setBudget(Budgets budget) {
+//        this.budget = budget;
+//    }
 }

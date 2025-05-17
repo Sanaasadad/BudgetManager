@@ -13,22 +13,22 @@ public class budgetController {
     @Autowired
     private BudgetSevices budgetSevices;
 
-    @PostMapping("/add")
+    @PostMapping
     public Budgets addBudget(Budgets budget) {
         return budgetSevices.addBudgets(budget);
     }
 
-    @GetMapping("/getall")
+    @GetMapping
     public List<Budgets> getAllBudgets() {
         return budgetSevices.getAllBudgets();
     }
 
-    @PutMapping("/update")
+    @PutMapping
     public Budgets updateBudget(Long id, Budgets budget) {
         return budgetSevices.updateBudgetById(budget);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping
     public void deleteBudget(Long id) {
         budgetSevices.deleteBudgetById(id);
     }

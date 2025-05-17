@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:64944") // ✅ هذا هو السطر المهم
 @RestController
 @RequestMapping("/category")
 public class categorieController {
@@ -15,23 +15,23 @@ public class categorieController {
 
 
 
-    @PostMapping("/Add")
+    @PostMapping
     public Categories addCategory(@RequestBody Categories categories) {
         return this.categoriesServices.addCategories(categories);
     }
 
-    @GetMapping("/get")
+    @GetMapping
     public List<Categories> getCategories() {
         return this.categoriesServices.getAllCategories();
     }
 
-    @PutMapping("/udapt")
+    @PutMapping
     public Categories updateCategorie(@RequestBody Categories categories) {
         return this.categoriesServices.updateCategories(categories);
     }
 
 
-    @DeleteMapping("/delete")
+    @DeleteMapping
     public void deleteCategory(@RequestParam Long id) {
          this.categoriesServices.deleteCategories(id);
     }
